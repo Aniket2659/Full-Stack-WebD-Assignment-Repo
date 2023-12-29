@@ -1,0 +1,234 @@
+Q1. What are conditional statements? Explain conditional statements with syntax and examples.
+
+Answer-  Conditional statements are programming constructs that allow you to control the flow of your program based on certain conditions. They enable you to execute different blocks of code depending on whether a specified condition evaluates to true or false.
+
+    The most common types of conditional statements are:
+
+    1. **If Statement:**
+    - Syntax:
+        ```python
+        if condition:
+            # Code to execute if the condition is true
+        ```
+    - Example:
+        ```python
+        x = 10
+        if x > 5:
+            print("x is greater than 5")
+        ```
+
+    2. **If-else Statement:**
+    - Syntax:
+        ```python
+        if condition:
+            # Code to execute if the condition is true
+        else:
+            # Code to execute if the condition is false
+        ```
+    - Example:
+        ```python
+        x = 3
+        if x > 5:
+            print("x is greater than 5")
+        else:
+            print("x is not greater than 5")
+        ```
+
+    3. **If-elif-else Statement:**
+    - Syntax:
+        ```python
+        if condition1:
+            # Code to execute if condition1 is true
+        elif condition2:
+            # Code to execute if condition2 is true
+        else:
+            # Code to execute if both condition1 and condition2 are false
+        ```
+    - Example:
+        ```python
+        x = 5
+        if x > 5:
+            print("x is greater than 5")
+        elif x == 5:
+            print("x is equal to 5")
+        else:
+            print("x is less than 5")
+        ```
+
+    4. **Nested If Statements:**
+    - You can also have if statements inside other if statements.
+    - Example:
+        ```python
+        x = 10
+        if x > 5:
+            print("x is greater than 5")
+            if x == 10:
+                print("x is equal to 10")
+                
+        ```
+
+Q2. Write a program that grades students based on their marks.
+       * If greater than 90 then A grade
+       * If between 70 and 90 than B grade
+       * If b/w 50 and 70 than C grade
+       * If below 50 then F grade
+
+Answer - 
+    progrm :-
+
+            const T_marks = 57;
+            const Grade;
+
+            if(T_marks>90){
+                grade = 'A';
+            }
+            else if(T_marks>=70 && T_marks<=90){
+                grade= 'B';
+            }
+            else if(T_marks>=50 && T_marks<70){
+                grade = 'C';
+            }
+            else if(T_marks<50){
+                grade = 'D';
+            }
+            else{
+                grade =  "Marks not entired";
+            }
+
+            console.log(`The grade of Student is ${grade}`);
+
+Q3. What are loops, and what do we need them? Explain different types of loops with their syntax and 
+examples.
+
+    Answer:- Loops are programming constructs that allow you to repeatedly execute a block of code as long as a certain condition is true. They are essential for automating repetitive tasks and iterating over collections of data. Loops help in writing efficient and concise code by eliminating the need to duplicate code for repetitive operations.
+
+        There are two main types of loops: **for** loops and **while** loops.
+
+        ### 1. **For Loops:**
+        For loops are used when you know the number of times you want to execute a block of code.
+
+        - **Syntax:**
+        ```python
+        for variable in iterable:
+            # Code to execute in each iteration
+        ```
+
+        - **Example:**
+        ```python
+        # Iterate over a list
+        fruits = ["apple", "banana", "cherry"]
+        for fruit in fruits:
+            print(fruit)
+        ```
+
+        Output:
+        ```
+        apple
+        banana
+        cherry
+        ```
+
+        ```python
+        # Iterate over a range of numbers
+        for i in range(5):
+            print(i)
+        ```
+
+        Output:
+        ```
+        0
+        1
+        2
+        3
+        4
+        ```
+
+        ### 2. **While Loops:**
+        While loops are used when you don't know the number of times you want to execute a block of code in advance. The loop continues as long as a specified condition is true.
+
+        - **Syntax:**
+        ```python
+        while condition:
+            # Code to execute as long as the condition is true
+        ```
+
+        - **Example:**
+        ```python
+        # Print numbers from 1 to 5 using a while loop
+        i = 1
+        while i <= 5:
+            print(i)
+            i += 1
+        ```
+
+        Output:
+        ```
+        1
+        2
+        3
+        4
+        5
+        ```
+
+        ### 3. **Loop Control Statements:**
+        In addition to basic loops, you can use loop control statements to modify the flow of a loop.
+
+        - **Break Statement:**
+            - Terminates the loop prematurely.
+            ```python
+            for i in range(10):
+                if i == 5:
+                    break
+                print(i)
+            ```
+
+        - **Continue Statement:**
+            - Skips the rest of the code inside the loop for the current iteration and moves to the next iteration.
+            ```python
+            for i in range(10):
+                if i == 5:
+                    continue
+                print(i)
+            ```
+
+        - **Pass Statement:**
+            - Acts as a placeholder. It is a null operation – when it is executed, nothing happens.
+            ```python
+            for i in range(5):
+                pass
+            ```
+
+        Loops are fundamental in programming, allowing developers to iterate through data structures, perform repetitive tasks, and create more flexible and dynamic code.
+
+Q4. Generate numbers between any 2 given numbers.
+
+Ex:
+    * const num1 = 10
+    * const num2 = 25;
+
+    output: 11, 12, 13, …., 25
+
+    Answer : - 
+        program:
+                const num1 = 10;
+                const num2 = 50;
+
+                for(let i=num1 +1 ; i<=num2 ; i++){
+                    console.log(i+ "\n");
+                }
+
+Q5. Use the while loop to print n9mbers from 1 to 25 in ascending and descending order
+
+    Answer:-
+        program:- 
+          let i = 1;
+         while (i<=25) {
+            console.log(i);
+            i++;
+         }
+         --i;
+         console.log("\n");
+         while(i>=1){
+            console.log(i);
+            i--;
+         }
