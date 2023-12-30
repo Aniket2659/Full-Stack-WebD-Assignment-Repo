@@ -1,0 +1,146 @@
+Q1: Create an arrow function called square that takes a number as an argument and returns its square. Use 
+the arrow function to calculate the square of a given number and display the result.
+
+Ans: 
+    program :- 
+       const square = (number) => {
+    return number * number;
+    };
+
+   const inputNumber = 25;
+   console.log(`The square of number ${inputNumber} is ${square(inputNumber)}`);
+------------------------------------------------------------------------------------------------------------------------
+
+Q2: Create a JavaScript function called generateGreeting that takes a name as an argument and returns a 
+personalized greeting message. Use this function to greet three different people
+
+Ans: 
+    Program:-
+        function generateGreeting(name){
+               return `Good Morning ${name}, Please tell me how may I help you`;
+        }
+
+        console.log(generateGreeting('Aniket'));
+        console.log(generateGreeting('Bhavesh'));
+        console.log(generateGreeting('basant'));
+        console.log(generateGreeting('gaurav'));
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Q3:-  Create an IIFE (Immediately Invoked Function Expression) that calculates the square of a number and 
+immediately displays the result?
+
+Ans: 
+    program: 
+        //IIFE printing the square of the number
+        (function (number){
+            console.log(number*number);
+        })(14);
+
+----------------------------------------------------------------------------------------------------------------
+
+Q4: Write a JavaScript function called calculateTax that takes an income as an argument and returns the 
+amount of tax to be paid. Use a closure to handle different tax rates based on income ranges. Test the 
+function with various incomes?
+
+Ans: 
+    program:
+        function calculateTax() {
+                    // Tax rates based on income ranges
+                    const taxRates = [
+                        { range: 10000, rate: 0.1 },
+                        { range: 30000, rate: 0.15 },
+                        { range: 70000, rate: 0.2 },
+                        { range: Infinity, rate: 0.25 }
+                    ];
+
+            // Return the inner function, which calculates tax based on income
+            return function(income) {
+                        let tax = 0;
+
+                    // Calculate tax based on income ranges
+                    for (const { range, rate } of taxRates) {
+                    if (income <= range) {
+                        tax += income * rate;
+                        break;
+                    } else {
+                        tax += range * rate;
+                        income -= range;
+                    }
+                    }
+
+                    return tax;
+                };
+        }
+
+        // Example usage:
+        const income1 = 15000;
+        const income2 = 45000;
+        const income3 = 80000;
+
+        const calculateTaxForIncome = calculateTax();
+
+        console.log(`Tax for income $${income1}: $${calculateTaxForIncome(income1)}`);
+        console.log(`Tax for income $${income2}: $${calculateTaxForIncome(income2)}`);
+        console.log(`Tax for income $${income3}: $${calculateTaxForIncome(income3)}`);
+
+--------------------------------------------------------------------------------------------------------------
+
+Q4: Write a JavaScript function called factorial that calculates the factorial of a non-negative integer using 
+recursion. Test the function with different inputs
+
+Ans:
+    program:
+       function factorial(n) {
+            // Base case: factorial of 0 is 1
+            if (n === 0) {
+            return 1;
+            }
+        
+            // Recursive case: n! = n * (n-1)!
+            return n * factorial(n - 1);
+        }
+  
+    // Example usage:
+    const input1 = 5;
+    const input2 = 0;
+    const input3 = 7;
+    
+    console.log(`Factorial of ${input1}: ${factorial(input1)}`);
+    console.log(`Factorial of ${input2}: ${factorial(input2)}`);
+    console.log(`Factorial of ${input3}: ${factorial(input3)}`);
+
+-------------------------------------------------------------------------------------------------------------------
+
+Q6.Write a JavaScript function called curry that takes a function as an argument and returns a curried 
+version of that function. The curried function should accept arguments one at a time and return a new 
+function until all arguments are provided. Then, it should execute the original function with all arguments. 
+Test the curry function with a function that adds two numbers?
+
+Ans
+    program:
+             function curry(fn) {
+                    return function curried(...args) {
+                    if (args.length >= fn.length) {
+                    // If all arguments are provided, execute the original function
+                    return fn(...args);
+                    } else {
+                    // If not all arguments are provided, return a new curried function
+                    return function (...moreArgs) {
+                        return curried(...args, ...moreArgs);
+                    };
+                    }
+                 };
+                }
+
+    // Example usage:
+    function add(a, b) {
+    return a + b;
+    }
+
+    const curriedAdd = curry(add);
+
+    // Test the curried function with different inputs
+    console.log(curriedAdd(2)(3)); // Outputs: 5
+    console.log(curriedAdd(5)(10)); // Outputs: 15
+    console.log(curriedAdd(1, 2)); // Outputs: 3 (executes immediately when all arguments are provided)
