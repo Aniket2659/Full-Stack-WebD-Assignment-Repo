@@ -274,11 +274,7 @@ Contributing to open-source projects on GitHub is a rewarding way to enhance you
   - Open-source communities vary, so be patient and respectful in your interactions. 
 
 Contributing to open source is a collaborative effort, and each contribution, no matter how small, makes a valuable impact. Happy contributing!
-```
 
-Feel free to use or modify this Markdown content as needed.
-
-```
 
 ---
 
