@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC clone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+    <!-- Information section of IRCTC -->
+    <div class="irctc-info">
+        <div class="section navbar">
+            <div class="navlogo">
+                <img src="./assets/Logo.jpg" alt="irctc Logo">
+            </div>
+            <div class="nav-part2">
+                <div class="nav-info">
+                    <a href="#" class="nav-info-btn">Ask Diksha</a>
+                    <a href="#" class="nav-info-btn">Contact us</a>
+                    <a href="#" class="nav-info-btn">Alerts</a>
+                </div>
+                <div class="nav-btn">
+                    <a href="#" class="nav-btn-main login">Login</a>
+                    <a href="#" class="nav-btn-main">Register</a>
+                    <a href="#" class="nav-btn-main">Agent Login</a>
+                </div>
+            </div>
+        </div>
+        <!-- Indian Railway name with some quality tag -->
+        <div class="section irctc-name">
+            <div class="irctc-name-main">
+                <div class="irctc-main-heading">
+                    <h1>Indian Railways</h1>
+                </div>
+                <div ><img src="./assets/Other logo.jpg"  class="irctc-other-logo" alt="irctc logo"></div>
+            </div> 
+            <div class="irctc-sub-main">
+                <p class="tag1"><b>Safety</b></p>
+                <p class="tag2"><b>Security</b></p>
+                <p class="tag3"><b>Punctuality</b></p>
+            </div>
+        </div>
+        <div class="section irctc-tab-btn">
+            <div ><a href="#" class="irctc-tab-navg tab-btn1"><span class="material-symbols-outlined">
+                confirmation_number
+                </span> <p>Book Ticket</p></a></div>
+            <div ><a href="#" class="irctc-tab-navg tab-btn2"><span class="material-symbols-outlined">
+                check
+                </span> <p>PNR Status</p></a></div>
+            <div ><a href="#" class="irctc-tab-navg tab-btn3"><span class="material-symbols-outlined">
+                insert_chart
+                </span> <p>Charts / Vacancy</p></a></div>
+        </div>
+        <!-- Destination input field are here -->
+        <div class="form-section">
+            <div>
+                <label for="fromCity">From City:</label>
+                <input type="text" id="fromCity" name="fromCity" placeholder="Enter from city">
+            </div>
+            
+            <button type="button" onclick="swapCities()">Swap</button>
+
+            <div>
+                <label for="toCity">To City:</label>
+                <input type="text" id="toCity" name="toCity" placeholder="Enter to city">
+            </div>
+      
+        </div>
+
+        <!-- additional form2 for more informtion -->
+            <div class="form-section2">
+                <div>
+                    <label for="travelDate">Travel Date:</label>
+                    <input type="date" id="travelDate" name="travelDate">
+                </div>
+          
+                <div>
+                    <label for="classType">Class Type:</label>
+                    <select id="classType" name="classType">
+                      <option value="sleeper">Sleeper</option>
+                      <option value="ac">AC</option>
+                      <option value="firstClass">First Class</option>
+                    </select>
+                </div>
+          
+                
+          
+                <div>
+                    <label for="seatType">Seat Type:</label>
+                    <select id="seatType" name="seatType">
+                      <option value="ac2">AC 2nd Class</option>
+                      <option value="cc">AC Chair Car</option>
+                      <option value="sleeper">Sleeper</option>
+                    </select>
+                </div>
+          
+                
+              </div>
+           
+        
+       
+            
+                <div class="form-input">
+                    
+                    <div class="irctc-input-fields">
+                        <label for="disability">Person With Disability Concession:</label>
+                        <input type="checkbox" id="disability" name="disability">
+                    </div>
+                    
+               
+                    <div class="irctc-input-fields">
+                        <label for="flexibleDate">Flexible With Date:</label>
+                        <input type="checkbox" id="flexibleDate" name="flexibleDate">
+                    </div>
+             
+            
+                    
+                    <div class="irctc-input-fields">
+                        <label for="AvalBirth">Train With Avaliable Birth:</label>
+                        <input type="checkbox" id="AvalBirth" name="AvalBirth">
+                    </div>
+                    
+               
+                    
+                    <div class="irctc-input-fields">
+                        <label for="railPass">Railway Pass Concession:</label>
+                        <input type="checkbox" id="railPass" name="railPass">
+                    </div>
+                    
+                </div>
+           
+
+        
+        
+            
+            <a href="#" class="search-btn"> <p>Search Train</p>  <span class="material-symbols-outlined">
+                    arrow_right_alt
+                    </span></a>
+            
+        
+    </div>
+
+    <!-- Image Section of IRCTC -->
+    
+    <div class="img-section">
+        <img src="./assets/image.jpg" alt="Indian Railway Image">
+    </div>
+
+   </div>
+   <script>
+    // JavaScript
+    function swapCities() {
+      const fromCityInput = document.getElementById("fromCity");
+      const toCityInput = document.getElementById("toCity");
+
+      // Swap values
+      const temp = fromCityInput.value;
+      fromCityInput.value = toCityInput.value;
+      toCityInput.value = temp;
+    }
+  </script>
+</body>
+</html>

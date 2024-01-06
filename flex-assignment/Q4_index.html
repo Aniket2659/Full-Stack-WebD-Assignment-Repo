@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Section</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+        .child_container{
+            padding: 3em;
+            margin: 2em;
+            border: 2px solid rgb(10, 10, 10);
+            border-radius: 20px;
+            
+        }
+        .child-1{
+            
+            background-color: aliceblue;
+            color: black;
+        }
+        .child-2{
+            
+            background-color: rgb(4, 4, 16);
+            color: white;
+        }
+        .child-3{
+            
+            background-color: aliceblue;
+            color:black;
+        }
+        li{
+            list-style: none;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+           
+        }
+        /* CSS Style */
+        .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        color: #ffffff;
+        background-color: #3498db; /* Set your desired background color */
+        border: 2px solid #3498db; /* Set your desired border color */
+        }
+
+        .btn:hover {
+        background-color: #2980b9; /* Set your desired background color on hover */
+        border-color: #2980b9; /* Set your desired border color on hover */
+        }
+        .stdbtn{
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child_container child-1">
+            
+                <h2>Free Plan</h2>
+                <p>For personal</p>
+                <h2>$0</h2>
+            
+            <div class="list">
+                <ul>
+                    <li><span class="material-symbols-outlined">
+                        check_circle
+                        </span> <p>1 users</p></li>
+                    <li><span class="material-symbols-outlined">
+                        check_circle
+                        </span> <p>4 Web mails</p></li>
+                    <li><span class="material-symbols-outlined">
+                        check_circle
+                        </span>  <p>Resonsive Website</p></li>
+                    <li><span class="material-symbols-outlined">
+                        check_circle
+                        </span>  <p>Free SSL</p></li>
+                </ul>
+            </div>
+            <div class="stdbtn"><button class="btn">Subscribe now</button></div>
+        </div>
+        <div class="child_container child-2">
+            <h2>Basic Plan</h2>
+            <p>For small business</p>
+            <h2>$29</h2>
+            <ul>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>4 users</p></li>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>10 Web mails</p></li>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>Resonsive Website</p></li>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>Free SSL</p></li>
+            </ul>
+            <div class="stdbtn"><button class="btn">Subscribe now</button></div>
+        </div>
+        <div class="child_container child-3">
+            <h2>Pro Plan</h2>
+            <p>For enterprise</p>
+            <h2>$49</h2>
+            <ul>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>Unlimited users</p></li>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>Unlimited Web mails</p></li>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>Resonsive Website</p></li>
+                <li><span class="material-symbols-outlined">
+                    check_circle
+                    </span> <p>Free SSL +SEO</p></li>
+            </ul>
+            <div class="stdbtn"><button class="btn">Subscribe now</button></div>
+        </div>
+    </div>
+</body>
+</html>
