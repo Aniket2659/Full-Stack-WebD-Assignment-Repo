@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image galary using css Grid</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            height: 100%;
+            width: 100%;
+           
+        }
+        .child{
+            
+            background-color: blueviolet;
+            padding:20px;
+            overflow: hidden;
+        
+        }
+        .child-1{
+           grid-column: span 2;
+        }
+        .child-3{
+            grid-row: span 2;
+        }
+        .child-5{
+            grid-row: span 2;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child child-1"><img src="./assets/download.jpeg" alt=""></div>
+        <div class="child child-2"><img src="./assets/04241279f5a85323615d383e6a55f151.jpg" alt=""></div>
+        <div class="child child-3"><img src="./assets/flowers-276014_640.jpg" alt=""></div>
+        <div class="child child-4"><img src="./assets/images.jpeg" alt=""></div>
+        <div class="child child-5"><img src="./assets/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" alt=""></div>
+        <div class="child child-6"><img src="./assets/W4A2827-1-1500x1000.jpg" alt=""></div>
+    </div>
+</body>
+</html>

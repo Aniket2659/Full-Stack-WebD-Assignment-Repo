@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Assignment - Arranging Container</title>
+    <style>
+        *{
+            padding: 20px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,1fr);
+            height: 80vh;
+            width: 80vw;
+            background-color: white;
+            gap: 30px;
+            
+
+        }
+        .child{
+            background-color: rgb(244, 231, 217);
+            padding: 30px;
+            border-radius: 30px;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .child-1{
+            grid-column: span 2;
+        }
+        .child-2{
+            grid-row: span 2;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child child-1"><P>A</P></div>
+        <div class="child child-2"><p>B</p></div>
+        <div class="child child-3"><P>C</P></div>
+        <div class="child child-4"><p>D</p></div>
+    </div>
+</body>
+</html>
