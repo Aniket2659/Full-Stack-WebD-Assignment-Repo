@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in Demo </title>
+</head>
+<body>
+    <form action="post">    
+        <label for="fname">First Name: <input type="text" name="fname" placeholder="eg. Jonysince" id="fname" required minlength="3" maxlength="20"/></label>
+        <br>
+        <label for="lname">Last Name: <input type="text" placeholder="eg. Khalifa" id="lname" required minlength="3" maxlength="20"></label>
+        <br>
+        <label for="email">Email: <input type="text" placeholder="Jonysince@gmail.com" id="email" required></label>
+        <br>
+        <label for="age">Age: <input type="number" placeholder="eg. 25" id="age" name="age" required min="10" max="150"></label>
+        <br>
+        <label for="gender">Gender: 
+            <input type="radio" value="Male" name="gender" id="male" checked>
+            <label for="male">Male
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="other">
+            <label for="other">Other</label>
+        </label>
+        <br>
+        
+    </label>
+    <label for="password">Password: <input type="text" name="password" placeholder="********" id="password" required min="8" max="20"></label>
+    <br>
+    <label for="password">Confirm Password: <input type="text" name="confirmpassword" id="confirmpassword" required></label>
+    <br>
+    <label for="terms">Terms: <input type="checkbox" name="tern" id="terms" required> I agree to terms and Conditions</label>
+    <br>
+    <button type="submit">Register</button>
+
+    </form>
+    
+</body>
+</html>
+    
+
