@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Question no-4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 20px;
+
+        padding: 20px;
+
+        background-color: #f5f5f5;
+
+        min-height: 100vh;
+      }
+      .item {
+        background-color: #ddd;
+
+       padding: 20px;
+
+      text-align: center;
+      }
+      .item1 {
+        background-color: red;
+      }
+      .item2 {
+        background-color: green;
+      }
+      .item3 {
+        background-color: blue;
+      }
+      .item4 {
+        background-color: orangered;
+      }
+      @media screen and (max-width:768px){
+        .container{
+            display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 20px;
+
+        background-color: #f5f5f5;
+
+        min-height: 100vh;
+        color: white;
+
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">Box1</div>
+      <div class="item item2">Box2</div>
+      <div class="item item3">Box3</div>
+      <div class="item item4">Box4</div>
+    </div>
+  </body>
+</html>
